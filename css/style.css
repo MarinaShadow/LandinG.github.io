@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contentNav {
+    background: #F6F8F9;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mobNav {
+    display: none;
+}
+.linkNav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.topmenu >li {
+    display: inline-block;
+    position: relative;
+}
+
+.linkNav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #343638;
+    opacity: 50%;
+    font-size: 11px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    margin-right: 30px;
+}
+ul {
+    list-style: none;
+}
+.submenu {
+    text-decoration: none;
+    background: #F6F8F9;
+    padding: 20px;
+    position: absolute;
+    top: 34px;
+    left: -20px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    width: 200px;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0 0;
+    transition: .6s ease-in-out;
+}
+.subMenuMob {
+    background: #F6F8F9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    transform: perspective(600px) rotateX(-90deg);
+    transform-origin: 0 0;
+    transition: .6s ease-in-out;
+    width: 287px;
+    box-shadow: 0 0 60px #00000099;
+}
+.logoMob:hover ~ .subMenuMob {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+.subMenuMob a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #343638;
+    opacity: 50%;
+    font-size: 11px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+.linkNavMob {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-row-gap: 35px;
+    grid-column-gap: 30px;
+    margin-top: 86px;
+    padding: 0 40px;
+}
+.linkNavMob .select {
+    opacity: 1;
+}
+.subMenuMob .logoMenu {
+    padding: 37px 40px 86px;
+}
+.footerMob {
+    background: #A6ADB4;
+    padding: 40px 57px;
+    margin-top: 150px;
+}
+.footerMobLink {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 35px;
+    grid-column-gap: 30px;
+}
+.footerMobLink a {
+    color: #FFFFFF;
+}
+.socialLinkMob {
+    display: flex;
+}
+.socialLinkMob a {
+    margin-right: 30px;
+    margin-top: 60px;
+}
+.submenu li {
+    margin-bottom: 20px;
+}
+.submenu .last {
+    margin-bottom: 0;
+}
+ul .select {
+    opacity: 1;
+}
+.topmenu > li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) rotateX(0deg);
+}
+.containerNav {
+    display: flex;
+    align-items: center;
+}
+.linkNav :last-child {
+    margin-right: 48px;
+}
+
+.worldNews {
+    background-image: url(../images/main.png);
+    background-repeat:no-repeat;
+    background-size: 100%;
+    color: #FFFFFF;
+    padding: 176px 140px;
+}
+.worldNews h3 {
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+.worldNews hr {
+    background: #FFFFFF;
+    height: 2px;
+    border: none;
+    margin: 40px 0;
+}
+.worldNews p {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.worldNews button {
+    background: #FA6980;
+    border-radius: 6px;
+    padding: 13px 36px;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+}
+.worldNews button:hover {
+    -webkit-filter: grayscale(0.3);
+    filter: grayscale(0.3);
+}
+
+.contentNews {
+    display: flex;
+}
+.moreNews {
+    padding: 105px 120px 100px 100px;
+}
+.moreNews h3 {
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #202124;
+}
+.moreNews hr {
+    background: #EBEDED;
+    height: 2px;
+    border: none;
+    margin: 40px 0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+.title h3 {
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #202124;
+}
+.title div :first-child {
+    margin-right: 40px;
+}
+
+.news h4 {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #FA6980;
+}
+.news h5 {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #202124;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.news p {
+    color: #A6ADB4;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.timeBlock {
+    display: flex;
+    align-items: end;
+}
+.timeBlock span {
+    color: #A6ADB4;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.travelNews {
+    margin-bottom: 40px;
+}
+
+.contentBody {
+    background: #F6F8F9;
+    padding: 40px 140px;
+}
+.card {
+    max-width: 360px;
+}
+.card img {
+    display: block;
+}
+.cardTextBox {
+    background: #FFFFFF;
+    border-radius: 0 0 6px 6px;
+    padding: 40px;
+}
+.cardTextBox h5 {
+    color: #202124;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+.cardTextBox p {
+    color: #A6ADB4;
+    font-size: 13px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 10px 0;
+}
+.containerCard {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.bigCard {
+    color: #FFFFFF;
+    padding: 40px;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+.city {
+    background-image: url(../images/city.png);
+    margin-bottom: 40px;
+}
+.travel {
+    background-image: url(../images/travel.png);
+}
+.bigCard h4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+.bigCard h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 232px;
+}
+.bigCard p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.smallCard {
+    border-radius: 6px;
+}
+.smallCard .cardTextBox {
+    padding: 20px 0;
+    margin-bottom: 0;
+    background: #F6F8F9;
+}
+.smallCard .cardTextBox h5 {
+    margin-bottom: 10px;
+}
+.smallCardContainer .smallCard {
+    margin-bottom: 20px;
+}
+.smallCardContainer :last-child {
+    margin-bottom: 0;
+}
+.timeBlock span .underline {
+    text-decoration: underline;
+    margin: 0;
+}
+
+.footer {
+    background: #A6ADB4;
+    padding: 55px 140px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerNavLink a {
+    text-decoration: none;
+    color: #CBD0D3;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.footerNavLink {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    margin-left: 65px;
+}
+.footerNavLink div {
+    display: grid;
+    grid-row: auto;
+    row-gap: 6px;
+}
+.sendEmail {
+    border-radius: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    max-width: 262px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sendEmail input {
+    border: none;
+    background: inherit;
+    padding: 10px 20px;
+    width: 100%;
+    outline: none;
+}
+.sendEmail button {
+    border: none;
+    background: inherit;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    outline: none;
+    cursor: pointer;
+}
+.sendEmail input::-webkit-input-placeholder {
+    color: #CBD0D3;
+    opacity: 50%;
+}
+.sendEmail input::-moz-placeholder {
+    color: #CBD0D3;
+    opacity: 50%;
+}
+.sendEmail input:-ms-input-placeholder {
+    color: #CBD0D3;
+    opacity: 50%;
+}
+.sendEmail input::-ms-input-placeholder {
+    color: #CBD0D3;
+    opacity: 50%;
+}
+.sendEmail input::placeholder {
+    color: #CBD0D3;
+    opacity: 50%;
+}
+.sendContainer p {
+    color: #CBD0D3;
+    font-size: 11px;
+    margin-top: 16px;
+}
+.socialLink a {
+    margin-right: 35px;
+}
+.socialLink a:last-child {
+    margin-right: 0;
+}
+.containerLogoLink {
+    display: flex;
+    align-items: start;
+}
+.arrow {
+    display: flex;
+}
+
+@media (max-width: 1920px) {
+    .bigCard {
+        width: 1050px;
+    }
+}
+@media (max-width: 1850px) {
+    .bigCard {
+        width: 1000px;
+    }
+}
+@media (max-width: 1750px) {
+    .bigCard {
+        width: 950px;
+    }
+}
+@media (max-width: 1700px) {
+    .bigCard {
+        width: 900px;
+    }
+}
+@media (max-width: 1650px) {
+    .bigCard {
+        width: 850px;
+    }
+}
+@media (max-width: 1600px) {
+    .bigCard {
+        width: 800px;
+    }
+}
+@media (max-width: 1550px) {
+    .bigCard {
+        width: 750px;
+    }
+}
+@media (max-width: 1500px) {
+    .bigCard {
+        width: 700px;
+    }
+}
+@media (max-width: 1450px) {
+    .moreNews {
+        padding: 7%;
+    }
+    .contentBody {
+        padding: 2% 7%;
+    }
+}
+@media (max-width: 1400px) {
+    .moreNews {
+        padding: 5%;
+    }
+}
+@media (max-width: 1350px) {
+    .contentBody {
+        padding: 2% 5%;
+    }
+}
+@media (max-width: 1300px) {
+    .moreNews {
+        padding: 4%;
+    }
+    .contentBody {
+        padding: 2% 4%;
+    }
+    .worldNews {
+        padding: 10%;
+    }
+}
+@media (max-width: 1300px) {
+    .bigCard {
+        width: 680px;
+    }
+    .bigCard h3 {
+        margin-top: 35%;
+    }
+    .smallCard .cardTextBox {
+        margin-bottom: 3%;
+    }
+}
+@media (max-width: 1250px) {
+    .bigCard {
+        width: 93%;
+    }
+    .contentBody .changeSize {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .smallCardContainer {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer {
+        padding: 4% 5%;
+    }
+}
+@media (max-width: 1190px) {
+    .card {
+        max-width: 320px;
+    }
+    .card img{
+        max-width: 100%;
+    }
+}
+@media (max-width: 1100px) {
+    .moreNews {
+        padding: 2%;
+    }
+    .moreNews hr {
+        margin: 6% 0;
+    }
+}
+@media (max-width: 1050px) {
+    .card {
+        max-width: 300px;
+    }
+    .worldNews {
+        padding: 8%;
+    }
+    .bigCard {
+        width: 92%;
+    }
+    .travelNews {
+        margin-bottom: 10%;
+    }
+}
+@media (max-width: 950px) {
+    .card {
+        max-width: 270px;
+    }
+    .worldNews {
+        padding: 6%;
+    }
+    .bigCard {
+        width: 91%;
+    }
+    .bigCard h3 {
+        margin-top: 30%;
+    }
+    .footerNavLink {
+        margin-left: 10%;
+    }
+    .footerNavLink {
+        -moz-column-gap: 15px;
+        column-gap: 15px;
+    }
+}
+@media (max-width: 950px) {
+    .card {
+        max-width: 250px;
+    }
+    .bigCard {
+        width: 90%;
+    }
+    .bigCard h3 {
+        margin-top: 25%;
+    }
+    .news h5 {
+        margin-top: 5%;
+    }
+    .worldNews {
+        background-color: #00000033;
+        background-blend-mode: overlay;
+    }
+}
+@media (max-width: 885px) {
+    .worldNews {
+        padding: 5%;
+    }
+    .cardTextBox {
+        padding: 7%;
+    }
+}
+@media (max-width: 865px) {
+    .worldNews {
+        padding: 4%;
+    }
+}
+@media (max-width: 845px) {
+    .contentNews {
+        flex-direction: column;
+    }
+    .moreNews {
+        padding: 4% 2%;
+    }
+    .moreNews hr {
+        margin: 2% 0;
+    }
+    .travelNews {
+        margin-bottom: 3%;
+    }
+    .news h5 {
+        margin-top: 2%;
+    }
+    .socialLink a {
+        margin-right: 15px;
+    }
+    .bigCard h3 {
+        margin-top: 20%;
+    }
+    .card {
+        max-width: 230px;
+    }
+    .bigCard {
+        width: 89%;
+    }
+    .moreNews {
+        padding: 2% 4%;
+    }
+}
+@media (max-width: 760px) {
+    .card {
+        max-width: 210px;
+    }
+    .sendEmail {
+        width: 200px;
+    }
+    .bigCard {
+        padding: 5%;
+    }
+}
+
+@media (max-width: 700px) {
+    .socialLink a {
+        margin-right: 0;
+    }
+    .socialLink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footerNavLink {
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+    }
+    .card {
+        max-width: 190px;
+    }
+}
+@media (max-width: 620px) {
+    .card {
+        max-width: 170px;
+    }
+    .cardTextBox {
+        padding: 8%;
+    }
+    .footer {
+        flex-direction: column;
+    }
+    .containerLogoLink {
+        justify-content: space-between;
+    }
+    .footerNavLink {
+        -moz-column-gap: 100px;
+        column-gap: 100px;
+    }
+    .socialLink {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .socialLink a {
+        margin-right: 15px;
+    }
+    .sendEmail {
+        width: 100%;
+    }
+    .sendContainer {
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 510px) {
+    .footerNavLink {
+        -moz-column-gap: 80px;
+        column-gap: 80px;
+    }
+    .linkNav li a {
+        margin-right: 10px;
+    }
+    .linkNav :last-child {
+        margin-right: 10px;
+    }
+    .submenu {
+        width: 150px;
+    }
+    .bigCard h3 {
+        margin-top: 15%;
+    }
+    .footerNavLink {
+        margin-left: 0;
+    }
+}
+@media (max-width: 450px) {
+    .containerCard {
+        flex-direction: column;
+    }
+    .card {
+        max-width: 410px;
+        margin-bottom: 20px;
+    }
+    .card > img {
+        width: 100%;
+    }
+    .contentBody {
+        padding: 2% 4%;
+    }
+    .moreNews {
+        padding: 4%;
+    }
+    .worldNews {
+        padding: 4% 4%;
+        background-size: cover;
+    }
+    .smallCardContainer {
+        flex-direction: column;
+    }
+    .submenu {
+        width: 100px;
+    }
+    .bigCard {
+        padding: 4%;
+    }
+    .bigCard {
+        width: 90%;
+        background-size: cover;
+    }
+    .worldNews hr {
+        margin: 25px 0;
+    }
+}
+@media (max-width: 440px) {
+    .contentNav {
+        display: none;
+    }
+    .mobNav {
+        display: block;
+        background: #F6F8F9;
+    }
+    .logoMob {
+        display: flex;
+        flex-direction: column;
+        width: 16px;
+        height: 14px;
+        justify-content: space-between;
+        align-items: start;
+        position: relative;
+        cursor: pointer;
+    }
+    .mobNav {
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer {
+        display: none;
+    }
+}
